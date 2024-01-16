@@ -1,0 +1,15 @@
+#!/bin/bash
+DATE=$(date +"%Y%m%d%H%M")
+
+echo "Please enter the file name for new sql : example create_workflow_schema"
+read FILENAME
+FILENAME=`echo "$FILENAME" | sed 's/ //g' | tr '[:upper:]' '[:lower:]'`
+
+
+file1=`echo ${DATE}_${FILENAME}.up.sql`
+file2=`echo ${DATE}_${FILENAME}.down.sql`
+
+touch $file1 
+touch $file2
+
+echo "Please use the files $file1 , $file2"

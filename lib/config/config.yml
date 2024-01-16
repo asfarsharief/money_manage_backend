@@ -1,0 +1,13 @@
+server:
+  env: dev
+  host: localhost
+  port: "3030"
+  apipath: /
+  webdir: web
+
+database:
+  dbhost: localhost
+  dbname: qc-dev
+  dbuser: postgres
+  dbport: "5432"
+  dbpassword: postgres
